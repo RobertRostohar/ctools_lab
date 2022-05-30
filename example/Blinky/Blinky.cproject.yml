@@ -19,6 +19,9 @@ project:
     - layer: ./Board/IMXRT1050-EVKB/Board.clayer.yml
       for-type: 
         - +IMXRT1050-EVKB
+    - layer: ./Board/FRDM-K32L3A6/Board.clayer.yml
+      for-type: 
+        - +FRDM-K32L3A6
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
     - layer: ./RTOS/RTX/RTOS.clayer.yml
