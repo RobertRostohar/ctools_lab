@@ -27,6 +27,12 @@ solution:
     - pack: Keil::iMXRT105x_MWP@1.4.0
       for-type:
         - +IMXRT1050-EVKB
+    - pack: Keil::STM32L4xx_DFP@2.6.1
+      for-type:
+        - +B-L475E-IOT01A
+    - pack: Keil::B-L475E-IOT01A_BSP@1.0.1
+      for-type:
+        - +B-L475E-IOT01A
 
   target-types:
     - type: AVH_MPS2_Cortex-M7
@@ -37,6 +43,9 @@ solution:
     - type: IMXRT1050-EVKB
       # board: EVKB-IMXRT1050_MDK
       device: MIMXRT1052DVL6B
+    - type: B-L475E-IOT01A
+      # board: B-L475E-IOT01A
+      device: STM32L475VGTx
 
   build-types:
     - type: Debug

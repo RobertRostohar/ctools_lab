@@ -19,6 +19,9 @@ project:
     - layer: ./Board/IMXRT1050-EVKB/Board.clayer.yml
       for-type: 
         - +IMXRT1050-EVKB
+    - layer: ./Board/B-L475E-IOT01A/Board.clayer.yml
+      for-type: 
+        - +B-L475E-IOT01A
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
     - layer: ./RTOS/RTX/RTOS.clayer.yml
