@@ -33,6 +33,12 @@ solution:
     - pack: NXP::FRDM-K32L3A6_BSP@13.0.0
       for-type:
         - +FRDM-K32L3A6
+    - pack: Keil::STM32L4xx_DFP@2.6.1
+      for-type:
+        - +B-L475E-IOT01A
+    - pack: Keil::B-L475E-IOT01A_BSP@1.0.1
+      for-type:
+        - +B-L475E-IOT01A
 
   target-types:
     - type: AVH_MPS2_Cortex-M7
@@ -46,6 +52,9 @@ solution:
     - type: FRDM-K32L3A6
       # board:FRDM-K32L3A6
       device: K32L3A60VPJ1A:cm4
+    - type: B-L475E-IOT01A
+      # board: B-L475E-IOT01A
+      device: STM32L475VGTx
 
   build-types:
     - type: Debug

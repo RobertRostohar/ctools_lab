@@ -22,6 +22,9 @@ project:
     - layer: ./Board/FRDM-K32L3A6/Board.clayer.yml
       for-type: 
         - +FRDM-K32L3A6
+    - layer: ./Board/B-L475E-IOT01A/Board.clayer.yml
+      for-type: 
+        - +B-L475E-IOT01A
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
     - layer: ./RTOS/RTX/RTOS.clayer.yml
