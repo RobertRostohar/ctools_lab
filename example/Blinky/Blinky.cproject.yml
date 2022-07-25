@@ -25,6 +25,9 @@ project:
     - layer: ./Board/B-L475E-IOT01A/Board.clayer.yml
       for-type: 
         - +B-L475E-IOT01A
+    - layer: ./Board/NUCLEO-L552ZE-Q/Board.clayer.yml
+      for-type:
+        - +NUCLEO-L552ZE-Q
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
     - layer: ./RTOS/RTX/RTOS.clayer.yml

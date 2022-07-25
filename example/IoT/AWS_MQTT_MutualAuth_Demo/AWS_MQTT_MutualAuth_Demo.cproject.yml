@@ -179,6 +179,12 @@ project:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/NUCLEO-L552ZE-Q/Board.clayer.yml
+      for-type:
+        - +NUCLEO-L552ZE-Q
+        - +NUCLEO-L552ZE-Q_ESP8266
+        - +NUCLEO-L552ZE-Q_ISM43362
+        - +NUCLEO-L552ZE-Q_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
       for-type: 
@@ -188,6 +194,7 @@ project:
     - layer: ./Interface/AWS/FreeRTOS+TCP/Interface.clayer.yml
       for-type:
         - +IMXRT1050-EVKB
+        - +NUCLEO-L552ZE-Q
     - layer: ./Interface/AWS/Socket/Interface.clayer.yml
       for-type:
         - +AVH_MPS2_Cortex-M7
@@ -196,3 +203,6 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +NUCLEO-L552ZE-Q_ESP8266
+        - +NUCLEO-L552ZE-Q_ISM43362
+        - +NUCLEO-L552ZE-Q_WizFi360

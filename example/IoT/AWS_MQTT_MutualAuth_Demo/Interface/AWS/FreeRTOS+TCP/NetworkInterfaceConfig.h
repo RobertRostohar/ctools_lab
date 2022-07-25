@@ -29,6 +29,12 @@
 // <i>Select driver control block for PHY interface
 #define ETH_PHY_NUM             0
 
+// <s.15>Local Host Name
+// <i>This is the name under which embedded host can be
+// <i>accessed on a local area network.
+// <i>Default: "my_host"
+#define ETH_HOST_NAME           "my_host"
+
 // <h>Ethernet MAC Address
 //   <o>MAC Address byte 1 <0x00-0xff>
 #define ETH_MAC_ADDR0           0x5E
