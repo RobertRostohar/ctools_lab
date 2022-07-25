@@ -43,6 +43,9 @@ solution:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - pack: Keil::LPC4300_DFP
+      for-type:
+        - +MCB4300
 
   target-types:
     - type: AVH_MPS2_Cortex-M7
@@ -59,6 +62,9 @@ solution:
     - type: IMXRT1050-EVKB_WizFi360
       # board: EVKB-IMXRT1050_MDK
       device: MIMXRT1052DVL6B
+    - type: MCB4300
+      # board: MCB4300
+      device: LPC4357:Cortex-M4
 
   build-types:
     - type: Debug
@@ -67,8 +73,9 @@ solution:
         - C*:
           - -O1
           - -g
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:
@@ -78,8 +85,9 @@ solution:
       misc:
         - C*:
           - -O3
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:

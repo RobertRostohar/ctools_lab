@@ -14,7 +14,7 @@ project:
   defines:
     # - MBEDTLS_CONFIG_FILE="aws_mbedtls_config.h"
     - MBEDTLS_CONFIG_FILE=\"aws_mbedtls_config.h\"
-  
+
   add-paths:
     - ./config_files
     - ./amazon-freertos/demos/include
@@ -59,7 +59,7 @@ project:
 
   groups:
     - group: Documentation
-      files: 
+      files:
         - file: ./README.md
     - group: main
       files:
@@ -169,25 +169,29 @@ project:
 
   layers:
     - layer: ./Board/AVH_MPS2_Cortex-M7/Board.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS2_Cortex-M7
     - layer: ./Board/AVH_MPS3_Corstone-300/Board.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS3_Corstone-300
     - layer: ./Board/IMXRT1050-EVKB/Board.clayer.yml
-      for-type: 
+      for-type:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/MCB4300/Board.clayer.yml
+      for-type:
+        - +MCB4300
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS2_Cortex-M7
         - +AVH_MPS3_Corstone-300
 
     - layer: ./Interface/AWS/FreeRTOS+TCP/Interface.clayer.yml
       for-type:
         - +IMXRT1050-EVKB
+        - +MCB4300
     - layer: ./Interface/AWS/Socket/Interface.clayer.yml
       for-type:
         - +AVH_MPS2_Cortex-M7

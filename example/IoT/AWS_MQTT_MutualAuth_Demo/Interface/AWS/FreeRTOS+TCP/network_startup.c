@@ -45,7 +45,7 @@ static const uint8_t EthMAC[6] = {
 };
 
 extern const char *pcApplicationHostnameHook (void) {
-  return "IMXRT1050-EVKB";
+  return "MCB4300";
 }
 
 uint8_t NetUp;
