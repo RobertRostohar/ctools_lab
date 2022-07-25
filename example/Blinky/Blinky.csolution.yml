@@ -28,6 +28,7 @@ solution:
       for-type:
         - +IMXRT1050-EVKB
     - pack: NXP::K32L3A60_DFP@13.0.0
+
       for-type:
         - +FRDM-K32L3A6
     - pack: NXP::FRDM-K32L3A6_BSP@13.0.0
@@ -39,6 +40,13 @@ solution:
     - pack: Keil::B-L475E-IOT01A_BSP@1.0.1
       for-type:
         - +B-L475E-IOT01A
+
+    - pack: Keil::STM32H7xx_DFP@3.0.0
+      for-type:
+        - +STM32H735G-DK
+    - pack: Keil::STM32H735G-DK_BSP@2.0.0
+      for-type:
+        - +STM32H735G-DK
 
   target-types:
     - type: AVH_MPS2_Cortex-M7
@@ -55,6 +63,9 @@ solution:
     - type: B-L475E-IOT01A
       # board: B-L475E-IOT01A
       device: STM32L475VGTx
+    - type: STM32H735G-DK
+      # board: STM32H735G-DK
+      device: STM32H735IGKx
 
   build-types:
     - type: Debug
@@ -63,8 +74,9 @@ solution:
         - C*:
           - -O1
           - -g
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:
@@ -74,8 +86,9 @@ solution:
       misc:
         - C*:
           - -O3
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:

@@ -25,6 +25,9 @@ project:
     - layer: ./Board/B-L475E-IOT01A/Board.clayer.yml
       for-type: 
         - +B-L475E-IOT01A
+    - layer: ./Board/STM32H735G-DK/Board.clayer.yml
+      for-type:
+        - +STM32H735G-DK
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
     - layer: ./RTOS/RTX/RTOS.clayer.yml
