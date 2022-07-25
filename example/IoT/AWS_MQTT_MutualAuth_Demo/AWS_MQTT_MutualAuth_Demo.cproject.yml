@@ -179,6 +179,11 @@ project:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/LPCXpresso55S69/Board.clayer.yml
+      for-type: 
+        - +LPCXpresso55S69_ESP8266
+        - +LPCXpresso55S69_ISM43362
+        - +LPCXpresso55S69_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
       for-type: 
@@ -196,3 +201,6 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +LPCXpresso55S69_ESP8266
+        - +LPCXpresso55S69_ISM43362
+        - +LPCXpresso55S69_WizFi360
