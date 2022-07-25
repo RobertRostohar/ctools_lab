@@ -44,6 +44,17 @@ solution:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
 
+    - pack: Keil::STM32L5xx_DFP@1.4.0
+      for-type:
+        - +STM32L562E-DK_ESP8266
+        - +STM32L562E-DK_ISM43362
+        - +STM32L562E-DK_WizFi360
+    - pack: Keil::STM32L562E-DK_BSP@1.3.0
+      for-type:
+        - +STM32L562E-DK_ESP8266
+        - +STM32L562E-DK_ISM43362
+        - +STM32L562E-DK_WizFi360
+
   target-types:
     - type: AVH_MPS2_Cortex-M7
       device: ARM::CMSDK_CM7_DP_VHT
@@ -59,6 +70,15 @@ solution:
     - type: IMXRT1050-EVKB_WizFi360
       # board: EVKB-IMXRT1050_MDK
       device: MIMXRT1052DVL6B
+    - type: STM32L562E-DK_ESP8266
+      # board: STM32L562E-DK
+      device: STM32L562QEIxQ
+    - type: STM32L562E-DK_ISM43362
+      # board: STM32L562E-DK
+      device: STM32L562QEIxQ
+    - type: STM32L562E-DK_WizFi360
+      # board: STM32L562E-DK
+      device: STM32L562QEIxQ
 
   build-types:
     - type: Debug
@@ -67,8 +87,9 @@ solution:
         - C*:
           - -O1
           - -g
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:
@@ -78,8 +99,9 @@ solution:
       misc:
         - C*:
           - -O3
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:

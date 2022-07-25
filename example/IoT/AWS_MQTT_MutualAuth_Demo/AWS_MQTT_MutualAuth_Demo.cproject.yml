@@ -179,6 +179,11 @@ project:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/STM32L562E-DK/Board.clayer.yml
+      for-type:
+        - +STM32L562E-DK_ESP8266
+        - +STM32L562E-DK_ISM43362
+        - +STM32L562E-DK_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
       for-type: 
@@ -196,3 +201,6 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +STM32L562E-DK_ESP8266
+        - +STM32L562E-DK_ISM43362
+        - +STM32L562E-DK_WizFi360
