@@ -179,6 +179,11 @@ project:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/32L4R9IDISCOVERY/Board.clayer.yml
+      for-type: 
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
       for-type: 
@@ -196,3 +201,6 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
