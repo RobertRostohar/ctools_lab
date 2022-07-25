@@ -179,6 +179,12 @@ project:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/STM32H735G-DK/Board.clayer.yml
+      for-type:
+        - +STM32H735G-DK
+        - +STM32H735G-DK_ESP8266
+        - +STM32H735G-DK_ISM43362
+        - +STM32H735G-DK_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
       for-type: 
@@ -188,6 +194,7 @@ project:
     - layer: ./Interface/AWS/FreeRTOS+TCP/Interface.clayer.yml
       for-type:
         - +IMXRT1050-EVKB
+        - +STM32H735G-DK
     - layer: ./Interface/AWS/Socket/Interface.clayer.yml
       for-type:
         - +AVH_MPS2_Cortex-M7
@@ -196,3 +203,6 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +STM32H735G-DK_ESP8266
+        - +STM32H735G-DK_ISM43362
+        - +STM32H735G-DK_WizFi360
