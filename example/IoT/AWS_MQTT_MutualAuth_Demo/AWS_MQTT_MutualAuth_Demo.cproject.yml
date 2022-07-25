@@ -179,6 +179,12 @@ project:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/NUCLEO-H743ZI/Board.clayer.yml
+      for-type:
+        - +NUCLEO-H743ZI
+        - +NUCLEO-H743ZI_ESP8266
+        - +NUCLEO-H743ZI_ISM43362
+        - +NUCLEO-H743ZI_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
       for-type: 
@@ -188,6 +194,7 @@ project:
     - layer: ./Interface/AWS/FreeRTOS+TCP/Interface.clayer.yml
       for-type:
         - +IMXRT1050-EVKB
+        - +NUCLEO-H743ZI
     - layer: ./Interface/AWS/Socket/Interface.clayer.yml
       for-type:
         - +AVH_MPS2_Cortex-M7
@@ -196,3 +203,6 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +NUCLEO-H743ZI_ESP8266
+        - +NUCLEO-H743ZI_ISM43362
+        - +NUCLEO-H743ZI_WizFi360

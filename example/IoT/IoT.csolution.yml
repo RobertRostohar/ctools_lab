@@ -44,6 +44,19 @@ solution:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
 
+    - pack: Keil::STM32H7xx_DFP@3.0.0
+      for-type:
+        - +NUCLEO-H743ZI
+        - +NUCLEO-H743ZI_ESP8266
+        - +NUCLEO-H743ZI_ISM43362
+        - +NUCLEO-H743ZI_WizFi360
+    - pack: Keil::NUCLEO-H743ZI_BSP@1.0.0
+      for-type:
+        - +NUCLEO-H743ZI
+        - +NUCLEO-H743ZI_ESP8266
+        - +NUCLEO-H743ZI_ISM43362
+        - +NUCLEO-H743ZI_WizFi360
+
   target-types:
     - type: AVH_MPS2_Cortex-M7
       device: ARM::CMSDK_CM7_DP_VHT
@@ -59,6 +72,18 @@ solution:
     - type: IMXRT1050-EVKB_WizFi360
       # board: EVKB-IMXRT1050_MDK
       device: MIMXRT1052DVL6B
+    - type: NUCLEO-H743ZI
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
+    - type: NUCLEO-H743ZI_ESP8266
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
+    - type: NUCLEO-H743ZI_ISM43362
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
+    - type: NUCLEO-H743ZI_WizFi360
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
 
   build-types:
     - type: Debug
@@ -67,8 +92,9 @@ solution:
         - C*:
           - -O1
           - -g
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:
@@ -78,8 +104,9 @@ solution:
       misc:
         - C*:
           - -O3
+          - -fshort-enums -fshort-wchar -ffunction-sections
         - C:
-          - -std=c99
+          - -std=c11
         - ASM:
           - -masm=auto
         - Link:
