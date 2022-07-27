@@ -14,7 +14,7 @@ project:
   defines:
     # - MBEDTLS_CONFIG_FILE="aws_mbedtls_config.h"
     - MBEDTLS_CONFIG_FILE=\"aws_mbedtls_config.h\"
-  
+
   add-paths:
     - ./config_files
     - ./amazon-freertos/demos/include
@@ -59,7 +59,7 @@ project:
 
   groups:
     - group: Documentation
-      files: 
+      files:
         - file: ./README.md
     - group: main
       files:
@@ -169,25 +169,51 @@ project:
 
   layers:
     - layer: ./Board/AVH_MPS2_Cortex-M7/Board.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS2_Cortex-M7
     - layer: ./Board/AVH_MPS3_Corstone-300/Board.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS3_Corstone-300
     - layer: ./Board/IMXRT1050-EVKB/Board.clayer.yml
-      for-type: 
+      for-type:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/STM32L562E-DK/Board.clayer.yml
+      for-type:
+        - +STM32L562E-DK_ESP8266
+        - +STM32L562E-DK_ISM43362
+        - +STM32L562E-DK_WizFi360
+    - layer: ./Board/MCB4300/Board.clayer.yml
+      for-type:
+        - +MCB4300
+    - layer: ./Board/NUCLEO-L552ZE-Q/Board.clayer.yml
+      for-type:
+        - +NUCLEO-L552ZE-Q
+        - +NUCLEO-L552ZE-Q_ESP8266
+        - +NUCLEO-L552ZE-Q_ISM43362
+        - +NUCLEO-L552ZE-Q_WizFi360
+    - layer: ./Board/LPCXpresso55S69/Board.clayer.yml
+      for-type: 
+        - +LPCXpresso55S69_ESP8266
+        - +LPCXpresso55S69_ISM43362
+        - +LPCXpresso55S69_WizFi360
+    - layer: ./Board/32L4R9IDISCOVERY/Board.clayer.yml
+      for-type: 
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS2_Cortex-M7
         - +AVH_MPS3_Corstone-300
 
     - layer: ./Interface/AWS/FreeRTOS+TCP/Interface.clayer.yml
       for-type:
         - +IMXRT1050-EVKB
+        - +MCB4300
+        - +NUCLEO-L552ZE-Q
     - layer: ./Interface/AWS/Socket/Interface.clayer.yml
       for-type:
         - +AVH_MPS2_Cortex-M7
@@ -196,3 +222,15 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +STM32L562E-DK_ESP8266
+        - +STM32L562E-DK_ISM43362
+        - +STM32L562E-DK_WizFi360
+        - +NUCLEO-L552ZE-Q_ESP8266
+        - +NUCLEO-L552ZE-Q_ISM43362
+        - +NUCLEO-L552ZE-Q_WizFi360
+        - +LPCXpresso55S69_ESP8266
+        - +LPCXpresso55S69_ISM43362
+        - +LPCXpresso55S69_WizFi360
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360

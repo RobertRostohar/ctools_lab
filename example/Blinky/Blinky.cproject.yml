@@ -28,6 +28,18 @@ project:
     - layer: ./Board/STM32G071B-DISCO/Board.clayer.yml
       for-type:
         - +STM32G071B-DISCO
+    - layer: ./Board/STM32L562E-DK/Board.clayer.yml
+      for-type:
+        - +STM32L562E-DK
+    - layer: ./Board/NUCLEO-L552ZE-Q/Board.clayer.yml
+      for-type:
+        - +NUCLEO-L552ZE-Q
+    - layer: ./Board/LPCXpresso55S69/Board.clayer.yml
+      for-type: 
+        - +LPCXpresso55S69
+    - layer: ./Board/32L4R9IDISCOVERY/Board.clayer.yml
+      for-type: 
+        - +32L4R9IDISCOVERY
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
     - layer: ./RTOS/RTX/RTOS.clayer.yml
