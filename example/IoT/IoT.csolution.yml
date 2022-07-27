@@ -60,6 +60,17 @@ solution:
         - +LPCXpresso55S69_ISM43362
         - +LPCXpresso55S69_WizFi360
 
+    - pack: Keil::STM32L4xx_DFP@2.6.1
+      for-type:
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
+    - pack: Keil::32L4R9IDISCOVERY_BSP@1.0.0
+      for-type:
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
+
   target-types:
     - type: AVH_MPS2_Cortex-M7
       device: ARM::CMSDK_CM7_DP_VHT
@@ -84,6 +95,15 @@ solution:
     - type: LPCXpresso55S69_WizFi360
       # board: LPCXpresso55S69
       device: LPC55S69JBD100:cm33_core0
+    - type: 32L4R9IDISCOVERY_ESP8266
+      # board: 32L4R9IDISCOVERY
+      device: STM32L4R9AIIx
+    - type: 32L4R9IDISCOVERY_ISM43362
+      # board: 32L4R9IDISCOVERY
+      device: STM32L4R9AIIx
+    - type: 32L4R9IDISCOVERY_WizFi360
+      # board: 32L4R9IDISCOVERY
+      device: STM32L4R9AIIx
 
   build-types:
     - type: Debug

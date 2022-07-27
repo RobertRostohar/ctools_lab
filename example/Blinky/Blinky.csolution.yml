@@ -38,9 +38,13 @@ solution:
     - pack: Keil::STM32L4xx_DFP@2.6.1
       for-type:
         - +B-L475E-IOT01A
+        - +32L4R9IDISCOVERY
     - pack: Keil::B-L475E-IOT01A_BSP@1.0.1
       for-type:
         - +B-L475E-IOT01A
+    - pack: Keil::32L4R9IDISCOVERY_BSP@1.0.0
+      for-type:
+        - +32L4R9IDISCOVERY
 
     - pack: NXP::LPC55S69_DFP@13.0.0
       for-type:
@@ -70,6 +74,9 @@ solution:
     - type: LPCXpresso55S69
       # board: LPCXpresso55S69
       device: LPC55S69JBD100:cm33_core0
+    - type: 32L4R9IDISCOVERY
+      # board: 32L4R9IDISCOVERY
+      device: STM32L4R9AIIx
 
   build-types:
     - type: Debug

@@ -184,6 +184,11 @@ project:
         - +LPCXpresso55S69_ESP8266
         - +LPCXpresso55S69_ISM43362
         - +LPCXpresso55S69_WizFi360
+    - layer: ./Board/32L4R9IDISCOVERY/Board.clayer.yml
+      for-type: 
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
 
     - layer: ./Socket/VSocket/Socket.clayer.yml
       for-type: 
@@ -204,3 +209,6 @@ project:
         - +LPCXpresso55S69_ESP8266
         - +LPCXpresso55S69_ISM43362
         - +LPCXpresso55S69_WizFi360
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360

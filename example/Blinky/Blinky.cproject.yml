@@ -28,6 +28,9 @@ project:
     - layer: ./Board/LPCXpresso55S69/Board.clayer.yml
       for-type: 
         - +LPCXpresso55S69
+    - layer: ./Board/32L4R9IDISCOVERY/Board.clayer.yml
+      for-type: 
+        - +32L4R9IDISCOVERY
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
     - layer: ./RTOS/RTX/RTOS.clayer.yml
