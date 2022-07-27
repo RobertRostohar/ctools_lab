@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.4/tools/projmgr/schemas/clayer.schema.json
+
+layer:
+  # type: Board
+  # name: MCB4300
+  description: Board setup with interfaces
+
+  # interfaces:
+  #   - consumes:
+  #     - RTOS2:
+  #   - provides:
+  #     - C_ETH: 0
+  #     - C_MCI: 0
+  #     - STDOUT:
+  #     - Heap: 65536
+
+  # packs:
+  #   - pack: ARM::CMSIS
+  #   - pack: ARM::CMSIS-Driver
+  #   - pack: Keil::ARM_Compiler
+  #   - pack: Keil::LPC4300_DFP
+
+  add-paths:
+    - .
+
+  components:
+    - component: Device:Startup
+    - component: Device:SCU
+
+    - component: ARM::CMSIS:CORE
+
+    - component: Keil::CMSIS Driver:Ethernet MAC
+    - component: Keil::CMSIS Driver:Ethernet PHY:DP83848C
+    - component: Keil::CMSIS Driver:MCI
+
+    - component: Keil::Compiler&ARM Compiler:Event Recorder&DAP
+    - component: Keil::Compiler&ARM Compiler:I/O:STDOUT&ITM
+
+  groups:
+    - group: Board
+      files:
+        - file: ./main.c
+        - file: ./lpc4357.sct

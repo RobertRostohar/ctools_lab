@@ -43,6 +43,62 @@ solution:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - pack: Keil::LPC4300_DFP
+      for-type:
+        - +MCB4300
+
+    - pack: Keil::STM32L5xx_DFP@1.4.0
+      for-type:
+        - +NUCLEO-L552ZE-Q
+        - +NUCLEO-L552ZE-Q_ESP8266
+        - +NUCLEO-L552ZE-Q_ISM43362
+        - +NUCLEO-L552ZE-Q_WizFi360
+    - pack: Keil::NUCLEO-L552ZE-Q_BSP@1.2.0
+      for-type:
+        - +NUCLEO-L552ZE-Q
+        - +NUCLEO-L552ZE-Q_ESP8266
+        - +NUCLEO-L552ZE-Q_ISM43362
+        - +NUCLEO-L552ZE-Q_WizFi360
+
+    - pack: Keil::STM32H7xx_DFP@3.0.0
+      for-type:
+        - +NUCLEO-H743ZI
+        - +NUCLEO-H743ZI_ESP8266
+        - +NUCLEO-H743ZI_ISM43362
+        - +NUCLEO-H743ZI_WizFi360
+    - pack: Keil::NUCLEO-H743ZI_BSP@1.0.0
+      for-type:
+        - +NUCLEO-H743ZI
+        - +NUCLEO-H743ZI_ESP8266
+        - +NUCLEO-H743ZI_ISM43362
+        - +NUCLEO-H743ZI_WizFi360
+
+    - pack: NXP::LPC55S69_DFP@13.0.0
+      for-type:
+        - +LPCXpresso55S69_ESP8266
+        - +LPCXpresso55S69_ISM43362
+        - +LPCXpresso55S69_WizFi360
+    - pack: NXP::LPCXpresso55S69_BSP@13.0.0
+      for-type:
+        - +LPCXpresso55S69_ESP8266
+        - +LPCXpresso55S69_ISM43362
+        - +LPCXpresso55S69_WizFi360
+    - pack: Keil::LPCXpresso55S69_BSP@1.1.0
+      for-type:
+        - +LPCXpresso55S69_ESP8266
+        - +LPCXpresso55S69_ISM43362
+        - +LPCXpresso55S69_WizFi360
+
+    - pack: Keil::STM32L4xx_DFP@2.6.1
+      for-type:
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
+    - pack: Keil::32L4R9IDISCOVERY_BSP@1.0.0
+      for-type:
+        - +32L4R9IDISCOVERY_ESP8266
+        - +32L4R9IDISCOVERY_ISM43362
+        - +32L4R9IDISCOVERY_WizFi360
 
     - pack: Keil::STM32L5xx_DFP@1.4.0
       for-type:
@@ -79,6 +135,51 @@ solution:
     - type: STM32L562E-DK_WizFi360
       # board: STM32L562E-DK
       device: STM32L562QEIxQ
+    - type: MCB4300
+      # board: MCB4300
+      device: LPC4357:Cortex-M4
+    - type: NUCLEO-L552ZE-Q
+      # board: NUCLEO-L552ZE-Q
+      device: STM32L552ZETxQ
+    - type: NUCLEO-L552ZE-Q_ESP8266
+      # board: NUCLEO-L552ZE-Q
+      device: STM32L552ZETxQ
+    - type: NUCLEO-L552ZE-Q_ISM43362
+      # board: NUCLEO-L552ZE-Q
+      device: STM32L552ZETxQ
+    - type: NUCLEO-L552ZE-Q_WizFi360
+      # board: NUCLEO-L552ZE-Q
+      device: STM32L552ZETxQ
+    - type: NUCLEO-H743ZI
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
+    - type: NUCLEO-H743ZI_ESP8266
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
+    - type: NUCLEO-H743ZI_ISM43362
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
+    - type: NUCLEO-H743ZI_WizFi360
+      # board: NUCLEO-H743ZI
+      device: STM32H743ZITx
+    - type: LPCXpresso55S69_ESP8266
+      # board: LPCXpresso55S69
+      device: LPC55S69JBD100:cm33_core0
+    - type: LPCXpresso55S69_ISM43362
+      # board: LPCXpresso55S69
+      device: LPC55S69JBD100:cm33_core0
+    - type: LPCXpresso55S69_WizFi360
+      # board: LPCXpresso55S69
+      device: LPC55S69JBD100:cm33_core0
+    - type: 32L4R9IDISCOVERY_ESP8266
+      # board: 32L4R9IDISCOVERY
+      device: STM32L4R9AIIx
+    - type: 32L4R9IDISCOVERY_ISM43362
+      # board: 32L4R9IDISCOVERY
+      device: STM32L4R9AIIx
+    - type: 32L4R9IDISCOVERY_WizFi360
+      # board: 32L4R9IDISCOVERY
+      device: STM32L4R9AIIx
 
   build-types:
     - type: Debug
