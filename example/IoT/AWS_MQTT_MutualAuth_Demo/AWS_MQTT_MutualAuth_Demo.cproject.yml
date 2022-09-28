@@ -179,6 +179,11 @@ project:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+    - layer: ./Board/MIMXRT1064-EVK/Board.clayer.yml
+      for-type:
+        - +MIMXRT1064-EVK
+        - +MIMXRT1064-EVK_ESP8266
+        - +MIMXRT1064-EVK_WizFi360
     - layer: ./Board/STM32L562E-DK/Board.clayer.yml
       for-type:
         - +STM32L562E-DK_ESP8266
@@ -212,6 +217,7 @@ project:
     - layer: ./Interface/AWS/FreeRTOS+TCP/Interface.clayer.yml
       for-type:
         - +IMXRT1050-EVKB
+        - +MIMXRT1064-EVK
         - +MCB4300
         - +NUCLEO-L552ZE-Q
     - layer: ./Interface/AWS/Socket/Interface.clayer.yml
@@ -222,6 +228,8 @@ project:
       for-type:
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
+        - +MIMXRT1064-EVK_ESP8266
+        - +MIMXRT1064-EVK_WizFi360
         - +STM32L562E-DK_ESP8266
         - +STM32L562E-DK_ISM43362
         - +STM32L562E-DK_WizFi360

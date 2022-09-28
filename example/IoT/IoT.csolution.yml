@@ -47,6 +47,27 @@ solution:
       for-type:
         - +MCB4300
 
+    - pack: NXP::MIMXRT1064_DFP@15.0.0
+      for-type:
+        - +MIMXRT1064-EVK
+        - +MIMXRT1064-EVK_ESP8266
+        - +MIMXRT1064-EVK_WizFi360
+    - pack: NXP::EVK-MIMXRT1064_BSP@15.0.0
+      for-type:
+        - +MIMXRT1064-EVK
+        - +MIMXRT1064-EVK_ESP8266
+        - +MIMXRT1064-EVK_WizFi360
+    - pack: Keil::MIMXRT1064-EVK_BSP@1.3.0
+      for-type:
+        - +MIMXRT1064-EVK
+        - +MIMXRT1064-EVK_ESP8266
+        - +MIMXRT1064-EVK_WizFi360
+    - pack: Keil::iMXRT1064_MWP@1.5.0
+      for-type:
+        - +MIMXRT1064-EVK
+        - +MIMXRT1064-EVK_ESP8266
+        - +MIMXRT1064-EVK_WizFi360
+
     - pack: Keil::STM32L5xx_DFP@1.4.0
       for-type:
         - +NUCLEO-L552ZE-Q
@@ -113,6 +134,15 @@ solution:
     - type: IMXRT1050-EVKB_WizFi360
       # board: EVKB-IMXRT1050_MDK
       device: MIMXRT1052DVL6B
+    - type: MIMXRT1064-EVK
+      # board: EVK-MIMXRT1064_MDK
+      device: MIMXRT1064DVL6A
+    - type: MIMXRT1064-EVK_ESP8266
+      # board: EVK-MIMXRT1064_MDK
+      device: MIMXRT1064DVL6A
+    - type: MIMXRT1064-EVK_WizFi360
+      # board: EVK-MIMXRT1064_MDK
+      device: MIMXRT1064DVL6A
     - type: STM32L562E-DK_ESP8266
       # board: STM32L562E-DK
       device: STM32L562QEIxQ
