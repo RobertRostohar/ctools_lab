@@ -112,12 +112,21 @@ solution:
     - type: Debug
       compiler: AC6
       misc:
-        - C*:
+        - C-CPP:
           - -O1
           - -g
-          - -fshort-enums -fshort-wchar -ffunction-sections
+          - -Wno-macro-redefined
+          - -Wno-pragma-pack
+          - -Wno-parentheses-equality
+          - -ffunction-sections
+          - -fshort-enums
+          - -fshort-wchar
+          - -fsigned-char
+          - -gdwarf-4
         - C:
           - -std=c11
+        - CPP:
+          - -std=c++11
         - ASM:
           - -masm=auto
         - Link:
@@ -125,11 +134,20 @@ solution:
     - type: Release
       compiler: AC6
       misc:
-        - C*:
+        - C-CPP:
           - -O3
-          - -fshort-enums -fshort-wchar -ffunction-sections
+          - -Wno-macro-redefined
+          - -Wno-pragma-pack
+          - -Wno-parentheses-equality
+          - -ffunction-sections
+          - -fshort-enums
+          - -fshort-wchar
+          - -fsigned-char
+          - -gdwarf-4
         - C:
           - -std=c11
+        - CPP:
+          - -std=c++11
         - ASM:
           - -masm=auto
         - Link:
