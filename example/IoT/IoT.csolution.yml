@@ -23,22 +23,22 @@ solution:
       for-type:
         - +AVH_MPS3_Corstone-300
 
-    - pack: NXP::MIMXRT1052_DFP@13.1.0
+    - pack: NXP::MIMXRT1052_DFP@15.0.0
       for-type:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
-    - pack: NXP::EVKB-IMXRT1050_BSP@13.1.0
+    - pack: NXP::EVKB-IMXRT1050_BSP@15.0.0
       for-type:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
-    - pack: Keil::IMXRT1050-EVKB_BSP@1.0.0
+    - pack: Keil::IMXRT1050-EVKB_BSP@1.1.0
       for-type:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266
         - +IMXRT1050-EVKB_WizFi360
-    - pack: Keil::iMXRT105x_MWP@1.4.0
+    - pack: Keil::iMXRT105x_MWP@1.5.0
       for-type:
         - +IMXRT1050-EVKB
         - +IMXRT1050-EVKB_ESP8266

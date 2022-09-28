@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.3/tools/projmgr/schemas/clayer.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.4/tools/projmgr/schemas/clayer.schema.json
 
 layer:
   # type: Board
@@ -18,25 +18,28 @@ layer:
   #     - STDOUT:
   #     - STDIN:
   #     - STDERR:
-  #     - Heap : 65536
+  #     - Heap: 65536
 
   # packs:
   #   - pack: ARM::CMSIS
   #   - pack: ARM::CMSIS-Driver
   #   - pack: Keil::ARM_Compiler
-  #   - pack: NXP::MIMXRT1052_DFP@13.1.0
-  #   - pack: NXP::EVKB-IMXRT1050_BSP@13.1.0
-  #   - pack: Keil::IMXRT1050-EVKB_BSP@1.0.0
-  #   - pack: Keil::iMXRT105x_MWP@1.4.0
+  #   - pack: NXP::MIMXRT1052_DFP@15.0.0
+  #   - pack: NXP::EVKB-IMXRT1050_BSP@15.0.0
+  #   - pack: Keil::IMXRT1050-EVKB_BSP@1.1.0
+  #   - pack: Keil::iMXRT105x_MWP@1.5.0
 
   add-paths:
     - .
 
   defines:
-    - ETH_PHY_REF_CLK_50M=1
     - SDK_DEBUGCONSOLE=1
     # - __MCUXPRESSO
-    - SDK_I2C_BASED_COMPONENT_USED
+    - ETH_PHY_REF_CLK_50M=1
+    # - SDK_I2C_BASED_COMPONENT_USED
+    - CODEC_WM8960_ENABLE
+    - FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL=1
+    - VIO_SENSOR_DISABLE
     - SKIP_SYSCLK_INIT
     - XIP_BOOT_HEADER_DCD_ENABLE=1
     - XIP_BOOT_HEADER_ENABLE=1
@@ -53,7 +56,10 @@ layer:
     - component: NXP::Device:CMSIS:MIMXRT1052_header
     - component: NXP::Device:CMSIS:MIMXRT1052_system
 
+    - component: NXP::Device:SDK Drivers:cache
     - component: NXP::Device:SDK Drivers:clock
+    - component: NXP::Device:SDK Drivers:codec
+    - component: NXP::Device:SDK Drivers:codec_i2c
     - component: NXP::Device:SDK Drivers:common
     - component: NXP::Device:SDK Drivers:dmamux
     - component: NXP::Device:SDK Drivers:edma
@@ -63,15 +69,21 @@ layer:
     - component: NXP::Device:SDK Drivers:i2c
     - component: NXP::Device:SDK Drivers:iomuxc
     - component: NXP::Device:SDK Drivers:lists
+    - component: NXP::Device:SDK Drivers:lpi2c_adapter
     - component: NXP::Device:SDK Drivers:lpuart
     - component: NXP::Device:SDK Drivers:lpuart_adapter
     - component: NXP::Device:SDK Drivers:lpuart_edma
     - component: NXP::Device:SDK Drivers:nic301
+    - component: NXP::Device:SDK Drivers:sai
+    - component: NXP::Device:SDK Drivers:sai_edma
     - component: NXP::Device:SDK Drivers:sdhc
+    - component: NXP::Device:SDK Drivers:wm8960
+    - component: NXP::Device:SDK Drivers:wm8960_adapter
     - component: NXP::Device:SDK Drivers:xip_device
 
     - component: NXP::Device:SDK Project Template:RTE_Device
 
+    - component: NXP::Device:SDK Utilities:assert
     - component: NXP::Device:SDK Utilities:debug_console
       # defines:
       #   - SDK_DEBUGCONSOLE=1
@@ -106,9 +118,12 @@ layer:
   groups:
     - group: Board
       files:
-        - file: ./main.h
         - file: ./main.c
         - file: ./retarget_stdio.c
+        - file: ./Audio_IMXRT1050-EVKB.c
+        - file: ./Config_Audio.h
+        - file: ./Config_WM8960.h
+        - file: ./audio_drv.h
         - file: ../../RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_flexspi_nor_sdram.scf
     - group: MCUXpresso
       files:
