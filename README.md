@@ -14,7 +14,7 @@ Available examples:
 ## Prerequisites
 
 Tools:
- - [CMSIS-Toolbox 0.10.2](https://github.com/Open-CMSIS-Pack/devtools/releases/tag/tools%2Ftoolbox%2F0.10.2)
+ - [CMSIS-Toolbox 1.2.0](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/releases/tag/1.2.0)
  - [Keil MDK 5.37](https://www.keil.com/download/product)
  - Arm Compiler 6.18 (part of MDK)
 

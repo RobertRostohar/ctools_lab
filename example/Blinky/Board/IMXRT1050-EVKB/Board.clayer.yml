@@ -33,13 +33,9 @@ layer:
     - .
 
   defines:
-    - SDK_DEBUGCONSOLE=1
-    # - __MCUXPRESSO
-    - ETH_PHY_REF_CLK_50M=1
     # - SDK_I2C_BASED_COMPONENT_USED
     - CODEC_WM8960_ENABLE
     - FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL=1
-    - VIO_SENSOR_DISABLE
     - SKIP_SYSCLK_INIT
     - XIP_BOOT_HEADER_DCD_ENABLE=1
     - XIP_BOOT_HEADER_ENABLE=1
@@ -85,9 +81,9 @@ layer:
 
     - component: NXP::Device:SDK Utilities:assert
     - component: NXP::Device:SDK Utilities:debug_console
-      # defines:
-      #   - SDK_DEBUGCONSOLE=1
-      #   - __MCUXPRESSO
+      defines:
+        - SDK_DEBUGCONSOLE=1
+        - __MCUXPRESSO
     - component: NXP::Device:SDK Utilities:serial_manager
     - component: NXP::Device:SDK Utilities:serial_manager_uart
 
@@ -98,12 +94,14 @@ layer:
 
     - component: Keil::CMSIS Driver:Ethernet MAC
     - component: Keil::CMSIS Driver:Ethernet PHY:KSZ8081RNA
-      # defines:
-      #   - ETH_PHY_REF_CLK_50M=1
+      defines:
+        - ETH_PHY_REF_CLK_50M=1
     - component: Keil::CMSIS Driver:MCI
     - component: ARM::CMSIS Driver:USART:Custom
     - component: NXP::CMSIS Driver:USART:lpuart_cmsis
     - component: Keil::CMSIS Driver:VIO:Board&IMXRT1050-EVKB
+      defines:
+        - VIO_SENSOR_DISABLE
 
     - component: Keil::Compiler&ARM Compiler:Event Recorder&DAP
     - component: Keil::Compiler&ARM Compiler:I/O:STDERR&User
@@ -124,7 +122,7 @@ layer:
         - file: ./Config_Audio.h
         - file: ./Config_WM8960.h
         - file: ./audio_drv.h
-        - file: ../../RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_flexspi_nor_sdram.scf
+        - file: ./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_flexspi_nor_sdram.scf
     - group: MCUXpresso
       files:
         - file: ./IMXRT1050-EVKB.mex
