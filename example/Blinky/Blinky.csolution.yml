@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.4/tools/projmgr/schemas/csolution.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/1.3.0/tools/projmgr/schemas/csolution.schema.json
 
 solution:
   packs:
@@ -15,16 +15,16 @@ solution:
       for-type:
         - +AVH_MPS3_Corstone-300
 
-    - pack: NXP::MIMXRT1052_DFP@15.0.0
+    - pack: NXP::MIMXRT1052_DFP@15.1.0
       for-type:
         - +IMXRT1050-EVKB
-    - pack: NXP::EVKB-IMXRT1050_BSP@15.0.0
+    - pack: NXP::EVKB-IMXRT1050_BSP@15.1.0
       for-type:
         - +IMXRT1050-EVKB
-    - pack: Keil::IMXRT1050-EVKB_BSP@1.1.0
+    - pack: Keil::IMXRT1050-EVKB_BSP@1.1.1
       for-type:
         - +IMXRT1050-EVKB
-    - pack: Keil::iMXRT105x_MWP@1.5.0
+    - pack: Keil::iMXRT105x_MWP@1.5.1
       for-type:
         - +IMXRT1050-EVKB
     - pack: NXP::K32L3A60_DFP@13.0.0
@@ -112,21 +112,13 @@ solution:
     - type: Debug
       compiler: AC6
       misc:
-        - C-CPP:
+        - C:
           - -O1
           - -g
           - -Wno-macro-redefined
           - -Wno-pragma-pack
           - -Wno-parentheses-equality
-          - -ffunction-sections
-          - -fshort-enums
-          - -fshort-wchar
-          - -fsigned-char
-          - -gdwarf-4
-        - C:
           - -std=c11
-        - CPP:
-          - -std=c++11
         - ASM:
           - -masm=auto
         - Link:
@@ -134,20 +126,12 @@ solution:
     - type: Release
       compiler: AC6
       misc:
-        - C-CPP:
+        - C:
           - -O3
           - -Wno-macro-redefined
           - -Wno-pragma-pack
           - -Wno-parentheses-equality
-          - -ffunction-sections
-          - -fshort-enums
-          - -fshort-wchar
-          - -fsigned-char
-          - -gdwarf-4
-        - C:
           - -std=c11
-        - CPP:
-          - -std=c++11
         - ASM:
           - -masm=auto
         - Link:
