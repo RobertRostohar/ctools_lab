@@ -1,9 +1,11 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.4/tools/projmgr/schemas/clayer.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/1.3.0/tools/projmgr/schemas/clayer.schema.json
 
 layer:
   # type: Board
   # name: MCB4300
-  description: Board setup with interfaces
+  # variant: Ethernet
+  description: Board setup for IoT Ethernet interface
+  # for-device: LPC4357_Cortex-M4
 
   # interfaces:
   #   - consumes:
@@ -12,7 +14,7 @@ layer:
   #     - C_ETH: 0
   #     - C_MCI: 0
   #     - STDOUT:
-  #     - Heap: 65536
+  #     - Heap: 38912
 
   # packs:
   #   - pack: ARM::CMSIS
