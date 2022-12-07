@@ -11,6 +11,18 @@ project:
   #   - pack: AWS::corePKCS11@3.0.0-Beta
   #   - pack: Arm-Packs::PKCS11
 
+  # interfaces:
+  #   - provides:
+  #     - FreeRTOS:
+  #     - RTOS2:
+  #   - consumes:
+  #     - IoT_Socket:
+  #     - C_VIO:
+  #     - STDOUT:
+  #     - STDIN:
+  #     - STDERR:
+  #     - Heap : 65536
+
   defines:
     # - MBEDTLS_CONFIG_FILE="aws_mbedtls_config.h"
     - MBEDTLS_CONFIG_FILE=\"aws_mbedtls_config.h\"
@@ -31,12 +43,6 @@ project:
     - ./amazon-freertos/libraries/c_sdk/standard/common/include/private
     - ./amazon-freertos/libraries/freertos_plus/standard/crypto/include
     - ./amazon-freertos/libraries/freertos_plus/standard/tls/include
-
-  misc:
-    - C*:
-      - -Wno-macro-redefined
-      - -Wno-pragma-pack
-      - -Wno-parentheses-equality
 
   components:
     - component: ARM::CMSIS:RTOS2:FreeRTOS&Cortex-M
