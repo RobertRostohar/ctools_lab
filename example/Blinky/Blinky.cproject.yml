@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.3/tools/projmgr/schemas/cproject.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/1.3.0/tools/projmgr/schemas/cproject.schema.json
 
 project:
   groups:
@@ -11,19 +11,19 @@ project:
 
   layers:
     - layer: ./Board/AVH_MPS2_Cortex-M7/Board.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS2_Cortex-M7
     - layer: ./Board/AVH_MPS3_Corstone-300/Board.clayer.yml
-      for-type: 
+      for-type:
         - +AVH_MPS3_Corstone-300
     - layer: ./Board/IMXRT1050-EVKB/Board.clayer.yml
-      for-type: 
+      for-type:
         - +IMXRT1050-EVKB
     - layer: ./Board/FRDM-K32L3A6/Board.clayer.yml
-      for-type: 
+      for-type:
         - +FRDM-K32L3A6
     - layer: ./Board/B-L475E-IOT01A/Board.clayer.yml
-      for-type: 
+      for-type:
         - +B-L475E-IOT01A
     - layer: ./Board/STM32G071B-DISCO/Board.clayer.yml
       for-type:
@@ -35,10 +35,10 @@ project:
       for-type:
         - +NUCLEO-L552ZE-Q
     - layer: ./Board/LPCXpresso55S69/Board.clayer.yml
-      for-type: 
+      for-type:
         - +LPCXpresso55S69
     - layer: ./Board/32L4R9IDISCOVERY/Board.clayer.yml
-      for-type: 
+      for-type:
         - +32L4R9IDISCOVERY
 
     # - layer: ./RTOS/FreeRTOS/RTOS.clayer.yml
