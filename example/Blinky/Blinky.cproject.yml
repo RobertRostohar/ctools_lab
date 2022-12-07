@@ -3,7 +3,7 @@
 project:
   groups:
     - group: Documentation
-      files: 
+      files:
         - file: ./README.md
     - group: Application
       files:
@@ -19,6 +19,9 @@ project:
     - layer: ./Board/IMXRT1050-EVKB/Board.clayer.yml
       for-type:
         - +IMXRT1050-EVKB
+    - layer: ./Board/MIMXRT1064-EVK/Board.clayer.yml
+      for-type:
+        - +MIMXRT1064-EVK
     - layer: ./Board/FRDM-K32L3A6/Board.clayer.yml
       for-type:
         - +FRDM-K32L3A6
