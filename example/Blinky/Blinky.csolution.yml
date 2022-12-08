@@ -60,13 +60,13 @@ solution:
       for-type:
         - +32L4R9IDISCOVERY
 
-    - pack: NXP::LPC55S69_DFP@13.0.0
+    - pack: NXP::LPC55S69_DFP@15.0.0
       for-type:
         - +LPCXpresso55S69
-    - pack: NXP::LPCXpresso55S69_BSP@13.0.0
+    - pack: NXP::LPCXpresso55S69_BSP@15.0.1
       for-type:
         - +LPCXpresso55S69
-    - pack: Keil::LPCXpresso55S69_BSP@1.1.0
+    - pack: Keil::LPCXpresso55S69_BSP@1.1.1
       for-type:
         - +LPCXpresso55S69
 

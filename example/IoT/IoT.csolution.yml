@@ -81,17 +81,17 @@ solution:
         - +NUCLEO-L552ZE-Q_ISM43362
         - +NUCLEO-L552ZE-Q_WizFi360
 
-    - pack: NXP::LPC55S69_DFP@13.0.0
+    - pack: NXP::LPC55S69_DFP@15.0.0
       for-type:
         - +LPCXpresso55S69_ESP8266
         - +LPCXpresso55S69_ISM43362
         - +LPCXpresso55S69_WizFi360
-    - pack: NXP::LPCXpresso55S69_BSP@13.0.0
+    - pack: NXP::LPCXpresso55S69_BSP@15.0.1
       for-type:
         - +LPCXpresso55S69_ESP8266
         - +LPCXpresso55S69_ISM43362
         - +LPCXpresso55S69_WizFi360
-    - pack: Keil::LPCXpresso55S69_BSP@1.1.0
+    - pack: Keil::LPCXpresso55S69_BSP@1.1.1
       for-type:
         - +LPCXpresso55S69_ESP8266
         - +LPCXpresso55S69_ISM43362
