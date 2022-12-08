@@ -4,6 +4,7 @@ layer:
   # type: Board
   # name: LPCXpresso55S69
   description: Board setup with interfaces
+  # for-device: LPC55S69JBD100
 
   # interfaces:
   #   - consumes:
