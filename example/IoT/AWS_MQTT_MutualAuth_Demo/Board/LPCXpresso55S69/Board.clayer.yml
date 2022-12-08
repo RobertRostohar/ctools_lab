@@ -95,7 +95,7 @@ layer:
         - file: ./arduino.c
         - file: ./arduino.h
         - file: ./retarget_stdio.c
-        - file: ../../RTE/Device/LPC55S69JBD100_cm33_core0/LPC55S69_cm33_core0_flash.scf
+        - file: ./RTE/Device/LPC55S69JBD100_cm33_core0/LPC55S69_cm33_core0_flash.scf
     - group: MCUXpresso
       files:
         - file: ./LPCXpresso55S69.mex
