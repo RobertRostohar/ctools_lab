@@ -190,6 +190,11 @@ project:
         - +MIMXRT1064-EVK
         - +MIMXRT1064-EVK_ESP8266
         - +MIMXRT1064-EVK_WizFi360
+    - layer: ./Board/FRDM-K32L3A6/Board.clayer.yml
+      for-type:
+        - +FRDM-K32L3A6_ESP8266
+        - +FRDM-K32L3A6_ISM43362
+        - +FRDM-K32L3A6_WizFi360
     - layer: ./Board/STM32L562E-DK/Board.clayer.yml
       for-type:
         - +STM32L562E-DK_ESP8266
@@ -236,6 +241,9 @@ project:
         - +IMXRT1050-EVKB_WizFi360
         - +MIMXRT1064-EVK_ESP8266
         - +MIMXRT1064-EVK_WizFi360
+        - +FRDM-K32L3A6_ESP8266
+        - +FRDM-K32L3A6_ISM43362
+        - +FRDM-K32L3A6_WizFi360
         - +STM32L562E-DK_ESP8266
         - +STM32L562E-DK_ISM43362
         - +STM32L562E-DK_WizFi360
