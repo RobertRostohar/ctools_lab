@@ -4,6 +4,7 @@ layer:
   # type: Board
   # name: FRDM-K32L3A6
   description: Board setup with interfaces
+  # for-device: K32L3A60VPJ1A
 
   # interfaces:
   #   - consumes:
@@ -26,9 +27,6 @@ layer:
   add-paths:
     - .
 
-  defines:
-    - SDK_DEBUGCONSOLE=1
-
   misc:
     - Link:
       - '--diag_suppress 6314'
@@ -50,6 +48,7 @@ layer:
     - component: NXP::Device:SDK Drivers:lpspi
     - component: NXP::Device:SDK Drivers:lpuart
     - component: NXP::Device:SDK Drivers:lpuart_adapter
+    - component: NXP::Device:SDK Drivers:lpuart_edma
     - component: NXP::Device:SDK Drivers:msmc
     - component: NXP::Device:SDK Drivers:port
 
@@ -57,6 +56,8 @@ layer:
 
     - component: NXP::Device:SDK Utilities:assert
     - component: NXP::Device:SDK Utilities:debug_console
+      defines:
+        - SDK_DEBUGCONSOLE=1
 
     - component: NXP::Device:SDK Utilities:serial_manager
     - component: NXP::Device:SDK Utilities:serial_manager_uart
@@ -66,6 +67,7 @@ layer:
     - component: ARM::CMSIS:CORE
 
     - component: ARM::CMSIS Driver:SPI:Custom
+    - component: ARM::CMSIS Driver:USART:Custom
     - component: NXP::CMSIS Driver:USART:lpuart_cmsis
     - component: ARM::CMSIS Driver:VIO:Custom
 
@@ -73,6 +75,13 @@ layer:
     - component: Keil::Compiler&ARM Compiler:I/O:STDERR&User
     - component: Keil::Compiler&ARM Compiler:I/O:STDOUT&User
     - component: Keil::Compiler&ARM Compiler:I/O:STDIN&User
+
+    - component: Keil::CMSIS Driver:WiFi:ESP8266&UART
+      for-type: +FRDM-K32L3A6-EVK_ESP8266
+    - component: Keil::CMSIS Driver:WiFi:ISM43362&SPI
+      for-type: +FRDM-K32L3A6_ISM43362
+    - component: Keil::CMSIS Driver:WiFi:WizFi360&UART
+      for-type: +FRDM-K32L3A6_WizFi360
 
   groups:
     - group: Board
