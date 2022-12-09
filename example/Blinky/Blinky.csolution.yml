@@ -41,11 +41,10 @@ solution:
       for-type:
         - +MIMXRT1064-EVK
 
-    - pack: NXP::K32L3A60_DFP@13.0.0
-
+    - pack: NXP::K32L3A60_DFP@15.0.0
       for-type:
         - +FRDM-K32L3A6
-    - pack: NXP::FRDM-K32L3A6_BSP@13.0.0
+    - pack: NXP::FRDM-K32L3A6_BSP@15.0.1
       for-type:
         - +FRDM-K32L3A6
 

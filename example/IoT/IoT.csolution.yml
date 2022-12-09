@@ -68,6 +68,17 @@ solution:
         - +MIMXRT1064-EVK_ESP8266
         - +MIMXRT1064-EVK_WizFi360
 
+    - pack: NXP::K32L3A60_DFP@15.0.0
+      for-type:
+        - +FRDM-K32L3A6_ESP8266
+        - +FRDM-K32L3A6_ISM43362
+        - +FRDM-K32L3A6_WizFi360
+    - pack: NXP::FRDM-K32L3A6_BSP@15.0.1
+      for-type:
+        - +FRDM-K32L3A6_ESP8266
+        - +FRDM-K32L3A6_ISM43362
+        - +FRDM-K32L3A6_WizFi360
+
     - pack: Keil::STM32L5xx_DFP@1.4.0
       for-type:
         - +NUCLEO-L552ZE-Q
@@ -143,6 +154,15 @@ solution:
     - type: MIMXRT1064-EVK_WizFi360
       # board: EVK-MIMXRT1064_MDK
       device: MIMXRT1064DVL6A
+    - type: FRDM-K32L3A6_ESP8266
+      # board:FRDM-K32L3A6
+      device: K32L3A60VPJ1A:cm4
+    - type: FRDM-K32L3A6_ISM43362
+      # board:FRDM-K32L3A6
+      device: K32L3A60VPJ1A:cm4
+    - type: FRDM-K32L3A6_WizFi360
+      # board:FRDM-K32L3A6
+      device: K32L3A60VPJ1A:cm4
     - type: STM32L562E-DK_ESP8266
       # board: STM32L562E-DK
       device: STM32L562QEIxQ
