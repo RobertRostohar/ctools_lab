@@ -1,7 +1,7 @@
 Board: NXP FRDM-K32L3A6
 -----------------------
 
-The tables below list the device configuration for this board. The board layer for the NXP FRDM-K32L3A6 is using the software component `::Board Support: SDK Project Template: project_template (Variant: frdmk32l3a6)` from `NXP.FRDM-K32L3A6_BSP.13.0.0` pack.
+The tables below list the device configuration for this board. The board layer for the NXP FRDM-K32L3A6 is using the software component `::Board Support: SDK Project Template: project_template (Variant: frdmk32l3a6)` from `NXP.FRDM-K32L3A6_BSP.15.0.1` pack.
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 
