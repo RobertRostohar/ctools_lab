@@ -85,7 +85,7 @@ layer:
         - file: ./fsl_lpspi_cmsis.h
         - file: ./fsl_lpspi_cmsis.c
         - file: ./vio_FRDM-K32L3A6.c
-        - file: ../../RTE/Device/K32L3A60VPJ1A_cm4/K32L3A60xxx_cm4_flash.scf
+        - file: ./RTE/Device/K32L3A60VPJ1A_cm4/K32L3A60xxx_cm4_flash.scf
     - group: MCUXpresso
       files:
         - file: ./FRDM-K32L3A6.mex
