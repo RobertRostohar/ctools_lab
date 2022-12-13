@@ -3,13 +3,17 @@
 layer:
   # type: Board
   # name: AVH_MPS2_Cortex-M7
-  description: Board setup with interfaces
+  # variant: IoT-VSocket-Ethernet
+  description: Board setup for IoT with VSocket and Ethernet interface
+  # for device: ARM::CMSDK_CM7_DP_VHT
 
   # interfaces:
   #   - consumes:
   #     - RTOS2:
   #   - provides:
+  #     - VSocket
   #     - C_ETH: 0
+  #     - C_VIO:
   #     - STDOUT:
   #     - STDIN:
   #     - STDERR:
@@ -43,9 +47,7 @@ layer:
   groups:
     - group: Board
       files:
-        - file: ./main.h
         - file: ./main.c
         - file: ./retarget_stdio.c
-        # - file: ./Driver/vio_vht.c
         - file: ./Driver/vio_V2M-MPS2.c
         - file: ./fvp_config.txt
