@@ -11,7 +11,7 @@ solution:
       for-type:
         - +AVH_MPS2_Cortex-M7
 
-    - pack: ARM::V2M_MPS3_SSE_300_BSP@1.2.0
+    - pack: ARM::V2M_MPS3_SSE_300_BSP@1.3.0
       for-type:
         - +AVH_MPS3_Corstone-300
 

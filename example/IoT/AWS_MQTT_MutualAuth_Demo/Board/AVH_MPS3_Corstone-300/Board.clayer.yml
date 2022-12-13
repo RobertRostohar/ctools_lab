@@ -19,7 +19,7 @@ layer:
   #   - pack: ARM::CMSIS
   #   - pack: ARM::CMSIS-Driver
   #   - pack: Keil::ARM_Compiler
-  #   - pack: ARM::V2M_MPS3_SSE_300_BSP@1.2.0
+  #   - pack: ARM::V2M_MPS3_SSE_300_BSP@1.3.0
 
   processor:
     trustzone: secure
@@ -27,12 +27,23 @@ layer:
   add-paths:
     - .
 
+  defines:
+    - CMSIS_VIN
+    - CMSIS_VOUT
+
+  misc:
+    - Link:
+      - '--diag_suppress 6314,6848'
+
   components:
     - component: ARM::Device:Definition
     - component: ARM::Device:Startup&Baremetal
 
     - component: ARM::Native Driver:IO
     - component: ARM::Native Driver:UART
+    - component: ARM::Native Driver:SysCounter
+    - component: ARM::Native Driver:SysTimer
+    - component: ARM::Native Driver:Timeout
 
     - component: ARM::CMSIS:CORE
 
