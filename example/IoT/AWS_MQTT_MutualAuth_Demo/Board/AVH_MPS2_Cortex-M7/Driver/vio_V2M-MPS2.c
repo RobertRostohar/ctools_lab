@@ -1,11 +1,11 @@
 /******************************************************************************
- * @file     vio_vht.c
- * @brief    Virtual I/O implementation for VHT
+ * @file     vio_V2M-MPS2.c
+ * @brief    Virtual I/O implementation for V2M-MPS2
  * @version  V1.0.0
- * @date     1. December 2021
+ * @date     26. April 2022
  ******************************************************************************/
 /*
- * Copyright (c) 2019-2021 Arm Limited. All rights reserved.
+ * Copyright (c) 2019-2022 Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -22,6 +22,22 @@
  * limitations under the License.
  */
 
+/*! I/O Mapping
+The table below lists the I/O mapping of this CMSIS-Driver VIO implementation.
+Virtual Resource  | Variable       | Physical Resource on V2M-MPS2                  |
+:-----------------|:---------------|:-----------------------------------------------|
+vioBUTTON0        | vioSignalIn.0  | User Button PB1                                |
+vioBUTTON1        | vioSignalIn.1  | User Button PB1                                |
+vioLED0           | vioSignalOut.0 | User LED UL0                                   |
+vioLED1           | vioSignalOut.1 | User LED UL1                                   |
+vioLED2           | vioSignalOut.2 | User LED UL2                                   |
+vioLED3           | vioSignalOut.3 | User LED UL3                                   |
+vioLED4           | vioSignalOut.4 | User LED UL4                                   |
+vioLED5           | vioSignalOut.5 | User LED UL5                                   |
+vioLED6           | vioSignalOut.6 | User LED UL6                                   |
+vioLED7           | vioSignalOut.7 | User LED UL7                                   |
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
@@ -29,6 +45,8 @@
 
 #include "RTE_Components.h"             // Component selection
 #include CMSIS_device_header
+
+#include "SMM_MPS2.h"
 
 // VIO input, output definitions
 #define VIO_PRINT_MAX_SIZE      64U     // maximum size of print memory
@@ -66,6 +84,9 @@ void vioInit (void) {
   memset(vioValueXYZ, 0, sizeof(vioValueXYZ));
   memset(vioAddrIPv4, 0, sizeof(vioAddrIPv4));
   memset(vioAddrIPv6, 0, sizeof(vioAddrIPv6));
+
+  // Turn off all LEDs
+  MPS2_FPGAIO->LED = 0U;
 }
 
 // Print formated string to test terminal.
@@ -93,19 +114,18 @@ int32_t vioPrint (uint32_t level, const char *format, ...) {
 // Set signal output.
 void vioSetSignal (uint32_t mask, uint32_t signal) {
 
+  MPS2_FPGAIO->LED &= ~mask;
+  MPS2_FPGAIO->LED |=  mask & signal;
+
   vioSignalOut &= ~mask;
   vioSignalOut |=  mask & signal;
-
-  ARM_VIO->SignalOut.mask   = mask;
-  ARM_VIO->SignalOut.signal = signal;
 }
 
 // Get signal input.
 uint32_t vioGetSignal (uint32_t mask) {
   uint32_t signal;
 
-  ARM_VIO->SignalIn.mask = mask;
-  signal = ARM_VIO->SignalIn.signal;
+  signal = MPS2_FPGAIO->BUTTON & mask;
 
   vioSignalIn &= ~mask;
   vioSignalIn |=  signal;
@@ -122,8 +142,6 @@ void vioSetValue (uint32_t id, int32_t value) {
   }
 
   vioValue[index] = value;
-
-  ARM_VIO->Value[index] = value;
 }
 
 // Get value input.
@@ -135,9 +153,7 @@ int32_t vioGetValue (uint32_t id) {
     return value;                       /* return default in case of out-of-range index */
   }
 
-  value = ARM_VIO->Value[index];
-
-  vioValue[index] = value;
+  value = vioValue[index];
 
   return value;
 }

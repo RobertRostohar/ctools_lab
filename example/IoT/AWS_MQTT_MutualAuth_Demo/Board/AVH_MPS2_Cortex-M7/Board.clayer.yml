@@ -28,6 +28,10 @@ layer:
   add-paths:
     - .
 
+  defines:
+    - CMSIS_VIN
+    - CMSIS_VOUT
+
   components:
     - component: Device:Startup&C Startup
 
@@ -49,5 +53,5 @@ layer:
       files:
         - file: ./main.c
         - file: ./retarget_stdio.c
-        - file: ./Driver/vio_vht.c
+        - file: ./Driver/vio_V2M-MPS2.c
         - file: ./fvp_config.txt
