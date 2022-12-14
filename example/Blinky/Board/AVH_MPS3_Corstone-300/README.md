@@ -7,12 +7,12 @@ Running the VHT in uVision requires the following settings:
  - open "Options for Target"
  - select "Debug" tab
  - under "Use" select "Models ARMv8-M Debugger" and click "Settings" end enter the following:
-   - Command: $KARM\VHT\VHT_MPS3_Corstone_SSE-300_MDK.exe
+   - Command: $KARM\VHT\VHT_MPS3_Corstone_SSE-300.exe
    - Target: cpu0
    - Configuration File: fvp_config.txt
 
 Running the VHT via command line (from project root directory and VHT executable in path):
-`VHT_MPS3_Corstone_SSE-300_MDK -a <image>`
+`VHT_MPS3_Corstone_SSE-300 -a <image>`
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 

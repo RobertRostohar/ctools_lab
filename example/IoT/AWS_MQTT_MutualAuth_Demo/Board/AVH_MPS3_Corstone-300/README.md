@@ -7,12 +7,18 @@ Running the VHT in uVision requires the following settings:
  - open "Options for Target"
  - select "Debug" tab
  - under "Use" select "Models ARMv8-M Debugger" and click "Settings" end enter the following:
-   - Command: $KARM\VHT\VHT_MPS3_Corstone_SSE-300_MDK.exe
+   - Command: $KARM\VHT\VHT_MPS3_Corstone_SSE-300.exe
    - Target: cpu0
    - Configuration File: fvp_config.txt
 
 Running the VHT via command line (from project root directory and VHT executable in path):
-`VHT_MPS3_Corstone_SSE-300_MDK -f fvp_config.txt -C mps3_board.visualisation.disable-visualisation=1 -C mps3_board.telnetterminal0.start_telnet=0 -C mps3_board.uart0.out_file=- -a <image>`
+`VHT_MPS3_Corstone_SSE-300 -f Board/AVH_MPS3_Corstone-300/fvp_config.txt -C mps3_board.visualisation.disable-visualisation=1 -C mps3_board.telnetterminal0.start_telnet=0 -C mps3_board.uart0.out_file=- -a <image>`
+
+> Note: running on fast computers can lead to simulation running too quickly resulting in dropping incoming data packets from the network. 
+  This will be seen as error messages in the terminal window.  
+  Reduce the number of ticks to simulate for each quantum by specifying the following command line option `-Q <n>`, 
+  where `<n>` is the number of ticks (default value = 10000).  
+  Example: `-Q 10`
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 
