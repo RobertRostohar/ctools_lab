@@ -139,3 +139,4 @@ See table [Boards - Examples](README.md#boards-\--examples).
 |STM32H745I-DISCO      | [x]    | [ ]           | [ ]               | [ ]                | [ ]                | [ ]           | [ ]               |
 |STM32L562E-DK         | [x]    | [x]           | [x] UART\# 6      | [x] SPI\# 3        | [x] UART\# 6       | [ ]           | [ ]               |
 |AVH_MPS3_Corstone-300 | [x]    | [x]           | [ ]               | [ ]                | [ ]                | [ ]           | [x]               |
+|AVH_MPS2_Cortex-M7    | [x]    | [x]           | [ ]               | [ ]                | [ ]                | [ ]           | [x]               |

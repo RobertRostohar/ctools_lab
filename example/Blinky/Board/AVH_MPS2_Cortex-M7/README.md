@@ -7,12 +7,12 @@ Running the VHT in uVision requires the following settings:
  - open "Options for Target"
  - select "Debug" tab
  - under "Use" select "Models Cortex-M Debugger" and click "Settings" end enter the following:
-   - Command: $KARM\VHT\VHT_MPS2_Cortex-M7_MDK.exe
+   - Command: $KARM\VHT\VHT_MPS2_Cortex-M7.exe
    - Target: armcortexm7ct
    - Configuration File: fvp_config.txt
 
 Running the VHT via command line (from project root directory and VHT executable in path):
-`VHT_MPS2_Cortex-M7_MDK -a <image>`
+`VHT_MPS2_Cortex-M7 -a <image>`
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 
